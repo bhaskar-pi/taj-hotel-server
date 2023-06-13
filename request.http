@@ -1,0 +1,37 @@
+###
+POST http://localhost:3001/register
+Content-Type: application/json
+
+{
+    "username" : "Bhaskar",
+    "email": "Bhaskar@123",
+    "password": "bhaskar",
+    "confirmPassword" : "bhaskar"
+}
+
+###
+POST http://localhost:3001/login 
+Content-Type: application/json 
+
+{
+    "email": "bhaskar@123",
+    "password" : "12345"
+}
+
+###
+GET http://localhost:3001/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODY5OTJiODM4OGNmODQ5YzRjYmM3ZCIsImlhdCI6MTY4NjYzMDQ4Mn0.YgurmTjHS0k62Ruz1n6qevXPWB4mI-8M2C4Ol3b7h_0
+
+###
+POST http://localhost:3001/bookings
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODY5OTJiODM4OGNmODQ5YzRjYmM3ZCIsImlhdCI6MTY4NjYzMDQ4Mn0.YgurmTjHS0k62Ruz1n6qevXPWB4mI-8M2C4Ol3b7h_0
+
+{
+  "checkInDate": "2023-09-01",
+  "checkOutDate": "2023-10-01"
+}
+
+
+###
+GET http://localhost:3001/bookings
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ODY5OTJiODM4OGNmODQ5YzRjYmM3ZCIsImlhdCI6MTY4NjYzMDQ4Mn0.YgurmTjHS0k62Ruz1n6qevXPWB4mI-8M2C4Ol3b7h_0
